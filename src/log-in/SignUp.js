@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 function SignUp() {
     const [name, setName] = useState("")
@@ -14,7 +16,7 @@ function SignUp() {
             "Your password is","<br/>", password)
     }   
     return (
-        <div>
+        <div className="body">
             <form>
                 <div class="form-group">
                     <label for="name">User Name</label>
@@ -30,6 +32,9 @@ function SignUp() {
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <button type="submit" class="btn btn-primary" onClick={Login}> Signup</button>
+            
+                <Link to="./login" class="btn btn-primary"> Cancel </Link>
+               
             </form>
         </div>
     )

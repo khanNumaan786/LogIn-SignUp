@@ -1,12 +1,15 @@
-body {
-  align-items: center;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-}
 
-.container {
+
+/* body { */
+  /* align-items: center; */
+  /* background-color: #000; */
+  /* display: flow-root */
+  /* justify-content: center; */
+  /* height: 50vh; */
+/* } */
+
+
+ /* .container {
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
@@ -27,6 +30,11 @@ body {
   height: 50px;
   position: relative;
   width: 100%;
+} */
+
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
 }
-
-

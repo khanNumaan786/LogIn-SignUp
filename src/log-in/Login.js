@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-// import {browserHistory} from "react-router";   
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import "./Style.css"
-function Login() {
-    const [name, setName] = useState("")
+function Login(prop) {
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
 
@@ -14,7 +14,7 @@ function Login() {
 
 
     return (
-        <div>
+        <div className="body">
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
@@ -25,7 +25,7 @@ function Login() {
                     <label for="exampleInputPassword1">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
-                <button type="submit" class="btn btn-primary" onClick={signUp}>Log In</button>
+                <Link type="submit" class="btn btn-primary" onClick={signUp}>Log In</Link>
             </form>
         </div>
     )
